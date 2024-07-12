@@ -1,0 +1,58 @@
+
+x64-note
+
+# R Registers
+
+{| class="wikitable"
+|-
+! Index !! Name !! Description
+|-
+| 0 || rax || Return value reg.
+|-
+| 1 || rcx || -
+|-
+| 2 || rdx || -
+|-
+| 3 || rbx || -
+|-
+| 4 || rsp || -
+|-
+| 5 || rbp || -
+|-
+| 6 || rsi || -
+|-
+| 7 || rdi || A arg0 reg of function on Linux.
+|}
+
+<source>
+63                        31            15      7      0
+ | rax                     |  eax     ax |  ah  |   al |
+ | rbx                     |  ebx     bx |  bh  |   bl |
+ | rcx                     |  ecx     cx |  ch  |   cl |
+ | rdx                     |  edx     dx |  dh  |   dl |
+ | rsi                     |  esi     si |      |  sil |
+ | rdi                     |  edi     di |      |  dil |
+ | rbp                     |  ebp     bp |      |  bpl |
+ | rsp                     |  esp     sp |      |  spl |
+ |  r8                     |  r8d    r8w |      |  r8b |
+ |  r9                     |  r9d    r9w |      |  r9b |
+ | r10                     | r10d   r10w |      | r10b |
+ | r11                     | r11d   r11w |      | r11b |
+ | r12                     | r12d   r12w |      | r12b |
+ | r13                     | r13d   r13w |      | r13b |
+ | r14                     | r14d   r14w |      | r14b |
+ | r15                     | r15d   r15w |      | r15b |
+</source>
+
+# AVX-512
+
+<source>
+xmm0 ... xmm31 (512 / 16 == 32)
+ymm0 ... ymm15 (512 / 32 == 16)
+zmm0 ... zmm7  (512 / 64 == 8)
+
+63   48   32   15   0
+|xmm3|xmm2|xmm1|xmm0|
+|   ymm1  |   ymm0  |
+|        zmm0       |
+</source>
